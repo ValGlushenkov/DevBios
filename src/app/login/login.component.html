@@ -1,3 +1,4 @@
+<div class="login">
 <form (ngSubmit)="login()" [formGroup]="loginForm" class="center-center">
   <div>
     <mat-form-field appearance="outline">
@@ -20,4 +21,5 @@
 </form>
 <div *ngIf="loginError">
   {{loginErrorMessage}}
+</div>
 </div>

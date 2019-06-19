@@ -6,12 +6,18 @@ import {  BioDetailsComponent} from './bio-details/bio-details.component';
 import { CreateBioComponent } from './create-bio/create-bio.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth.service';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'bio',  component: BioComponent},
   {path: 'bio/:id', component:BioDetailsComponent},
-  {path: 'create-bio', component:CreateBioComponent},
+  {
+    path: 'create-bio', 
+    component:CreateBioComponent,
+    canActivate:[AuthService],
+    canDeactivate:[AuthService]
+  },
   {path:'login', component:LoginComponent}
 ];
 

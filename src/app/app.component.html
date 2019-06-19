@@ -9,7 +9,7 @@
     <li class="nav-item">
       <a class="nav-link" routerLink="/bio">Developer Bios</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" *ngIf="authenticated">
       <a class="nav-link" href="/create-bio">Create Bio</a>
     </li>
   </ul>
