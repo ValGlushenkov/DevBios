@@ -6,7 +6,9 @@
     <p><span class="bold">Year Started:</span> {{dev.yearStarted}}</p>-->
     <p> 
       <a [routerLink]="['/bio', dev.id]">
-        <span  class = "bold">First Name: </span>{{dev.firstName}}
+        <span  class = "bold">First Name: 
+        {{dev.firstName | uppercase}}
+        </span>
       </a>
     </p>
     <hr/>
